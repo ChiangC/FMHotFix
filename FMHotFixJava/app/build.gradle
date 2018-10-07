@@ -20,6 +20,12 @@ android {
 
     buildTypes {
         release {
+            //指定单独打到一个dex的类
+            multiDexKeepFile file('dex.keep')
+            def myFile = file('dex.keep')
+            println("isFileExists:"+myFile.exists())
+            println "dex keep"
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

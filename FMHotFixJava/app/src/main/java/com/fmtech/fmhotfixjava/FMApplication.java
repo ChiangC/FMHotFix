@@ -21,7 +21,8 @@ public class FMApplication extends Application {
 
     @Override
     public void onCreate() {
-        System.out.println("--------onCreate");
+        ClassLoader classLoader = getClassLoader();
+        System.out.println("--------onCreate---ClassLoader:"+getClassLoader());
         super.onCreate();
     }
 
